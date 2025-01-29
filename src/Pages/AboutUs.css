@@ -1,0 +1,230 @@
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .about-hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1441986300917-64674bd600d8');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    padding: 2rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease;
+  }
+  
+  .tagline {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    animation: fadeInUp 1s ease 0.2s;
+  }
+  
+  .stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+  }
+  
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #4CAF50;
+  }
+  
+  .stat-label {
+    font-size: 1rem;
+    color: #ffffff;
+  }
+  
+  .mission-section {
+    padding: 5rem 2rem;
+    background: #f9f9f9;
+  }
+  
+  .mission-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .mission-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+  }
+  
+  .mission-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .mission-card i {
+    font-size: 2.5rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+  }
+  
+  .team-section {
+    padding: 5rem 2rem;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+  
+  .team-member {
+    text-align: center;
+  }
+  
+  .member-image {
+    position: relative;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .member-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-links {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    padding: 1rem;
+    transition: bottom 0.3s ease;
+  }
+  
+  .team-member:hover .social-links {
+    bottom: 0;
+  }
+  
+  .social-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.2rem;
+  }
+  
+  .timeline-section {
+    padding: 5rem 2rem;
+    background: #f9f9f9;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: #4CAF50;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+  }
+  
+  .timeline-item {
+    padding: 2rem 0;
+    position: relative;
+  }
+  
+  .timeline-dot {
+    width: 20px;
+    height: 20px;
+    background: #4CAF50;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-content {
+    width: 45%;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin-left: 55%;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-content {
+    margin-left: 0;
+    margin-right: 55%;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+    
+    .stats-container {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .timeline::before {
+      left: 30px;
+    }
+    
+    .timeline-content {
+      width: calc(100% - 60px);
+      margin-left: 60px;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-content {
+      margin-left: 60px;
+      margin-right: 0;
+    }
+    
+    .timeline-dot {
+      left: 30px;
+    }
+  }
+  
